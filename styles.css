@@ -179,7 +179,7 @@ footer a:hover {
 
 /* Fondo de la página */
 body {
-    background: url('evento.jpg') no-repeat center center fixed; /* Imagen de fondo centrada y fija */
+    background: url('fondo.jpg') no-repeat center center fixed; /* Imagen de fondo centrada y fija */
     background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
     font-family: Arial, sans-serif; /* Fuente del texto */
     color: white; /* Color del texto en la página */
