@@ -1,0 +1,227 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente del texto */
+    text-align: center; /* Centra el contenido */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    background: #000; /* Fondo negro */
+    color: #fff; /* Texto en blanco */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px; /* Ancho máximo */
+    margin: 50px auto; /* Centrado */
+    padding: 20px; /* Espaciado interno */
+    background: rgba(20, 20, 20, 0.9); /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3); /* Sombra verde neón */
+}
+
+/* Efecto de sombra en títulos */
+.titulo, .subtitulo, .titulo-contador {
+    text-shadow: 3px 3px 5px rgba(0, 255, 0, 0.8); /* Efecto neón */
+    font-weight: bold;
+}
+
+/* Contenedor del contador con efecto neón */
+#contador {
+    margin: 20px 0; /* Espaciado */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Ajuste al contenido */
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    box-shadow: 0 0 15px #0f0, 0 0 30px #0f0; /* Efecto neón */
+}
+
+/* Estilo del número del contador */
+#cuentaRegresiva {
+    font-size: 2.5rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    color: #0f0; /* Color verde neón */
+}
+
+/* Estilos para videos responsivos */
+iframe {
+    width: 100%; /* Ocupa el ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos del formulario */
+form {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Organización en columna */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+/* Estilos para los campos de entrada, selección y botones */
+input, select, button {
+    padding: 12px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    outline: none; /* Sin resaltado */
+}
+
+/* Estilos específicos para los botones */
+button {
+    background: #00ff00; /* Color de fondo */
+    color: white; /* Texto en blanco */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor */
+    transition: 0.3s; /* Efecto de transición */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.7); /* Sombra */
+}
+
+button:hover {
+    background: #00cc00; /* Cambio de color */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed; /* Fijo en pantalla */
+    bottom: 20px; /* Posición desde abajo */
+    right: 20px; /* Posición desde la derecha */
+    background: #25d366; /* Color verde WhatsApp */
+    color: white; /* Texto en blanco */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 50%; /* Forma circular */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 22px; /* Tamaño de fuente */
+    box-shadow: 0px 5px 20px rgba(37, 211, 102, 0.8); /* Sombra */
+    transition: 0.3s; /* Efecto de transición */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+
+/* Estilos del pie de página */
+footer {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Agrega espacio superior */
+    padding: 10px; /* Espaciado interno */
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
+    color: white; /* Texto en color blanco */
+    font-size: 14px; /* Tamaño de fuente */
+    border-top: 1px solid rgba(0, 255, 0, 0.3); /* Borde superior con efecto neón */
+}
+
+/* Estilos para los enlaces dentro del footer */
+footer a {
+    color: #0f0; /* Color verde neón */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto al pasar el cursor sobre los enlaces */
+footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+
+
+/* Estilo para el anuncio en la cabecera */
+.anuncio-urgencia {
+    position: fixed; /* Fija el anuncio en la parte superior de la pantalla */
+    top: 0; /* Lo coloca en la parte superior */
+    left: 0; /* Lo alinea con el borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #ff0000; /* Fondo rojo llamativo para captar la atención */
+    color: white; /* Texto en color blanco para contraste */
+    text-align: center; /* Centra el texto */
+    font-size: 22px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    padding: 15px 0; /* Espaciado arriba y abajo para mejor visibilidad */
+    z-index: 9999; /* Asegura que el anuncio esté por encima de otros elementos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Agrega sombra para resaltar el anuncio */
+}
+
+/* Efecto de deslizamiento solo para el texto */
+.anuncio-urgencia span {
+    display: inline-block; /* Permite animar el texto sin afectar el contenedor */
+    white-space: nowrap; /* Evita que el texto se corte y se mantenga en una línea */
+    animation: deslizar-urgencia 30s linear infinite; /* Aplica animación de deslizamiento */
+}
+
+/* Efecto de deslizamiento del texto de izquierda a derecha */
+@keyframes deslizar-urgencia {
+    0% {
+        transform: translateX(-100%); /* Inicia fuera de la pantalla, a la izquierda */
+    }
+    100% {
+        transform: translateX(100%); /* Se mueve completamente hacia la derecha */
+    }
+}
+
+/* Estilo del texto con efecto 3D */
+.anuncio-urgencia span {
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5), /* Sombra negra para profundidad */
+        0 0 25px rgba(255, 255, 255, 0.7), /* Brillo blanco para efecto de resplandor */
+        0 0 5px rgba(0, 0, 0, 0.7); /* Segunda sombra negra para más profundidad */
+    transform: perspective(100px) rotateX(15deg); /* Aplica una perspectiva para efecto 3D */
+    animation: animar-texto 1.5s ease-out infinite alternate; /* Agrega animación de movimiento */
+}
+
+/* Animación para el efecto 3D en el texto */
+@keyframes animar-texto {
+    0% {
+        transform: perspective(100px) rotateX(15deg) scale(1); /* Posición inicial */
+    }
+    100% {
+        transform: perspective(100px) rotateX(10deg) scale(1.1); /* Hace que el texto se incline y crezca ligeramente */
+    }
+}
+
+/* Fondo de la página */
+body {
+    background: url('evento.jpg') no-repeat center center fixed; /* Imagen de fondo centrada y fija */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    color: white; /* Color del texto en la página */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Contenedores con fondo sólido y opacidad */
+.container, .form-container, #contador {
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad del 80% */
+    padding: 20px; /* Espaciado interno para separar el contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto; /* Centra el contenedor con un margen superior e inferior */
+    width: 80%; /* Ajusta el ancho al 80% del viewport */
+    max-width: 600px; /* Limita el ancho máximo a 600px */
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+/* Estilos para los títulos */
+h1, h2 {
+    text-shadow: 3px 3px 5px rgba(0, 255, 0, 0.7); /* Agrega un efecto de sombra en color verde neón */
+}
+
+/* Animación flotante para el texto */
+@keyframes flotar {
+    0% { 
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% { 
+        transform: translateY(-10px); /* El texto se eleva 10px */
+    }
+    100% { 
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Aplicar animación flotante al texto */
+.flotante {
+    display: inline-block; /* Permite que el elemento se comporte como un bloque en línea */
+    animation: flotar 2s infinite ease-in-out; /* Aplica la animación de forma continua */
+    text-shadow: 3px 3px 5px rgba(0, 255, 0, 0.7); /* Mantiene el efecto neón verde */
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Hace el texto más grueso */
+}
+

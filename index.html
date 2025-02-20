@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro al Evento</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <!-- Anuncio de urgencia en la parte superior -->
+    <div class="anuncio-urgencia">
+        <span>¡Hey quedan pocas horas para registrarte y acceder al evento exclusivo! ¡No pierdas esta oportunidad!</span>
+    </div>
+
+    <br><br><br><br>
+    <div class="container">
+        <h1 class="titulo">🎉 Evento Exclusivo: Presencial y Virtual 🎉</h1>
+        <p class="subtitulo">Mira el video y completa el formulario para recibir tu invitación.</p>
+
+        <!-- Contador con efecto neón -->
+        <div id="contador">
+            <h2 class="titulo-contador">⏳ El evento comienza en:</h2>
+            <div id="cuentaRegresiva">
+                <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+            </div>
+        </div>
+        <br><br>
+
+        <!-- Video incrustado de YouTube -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5X6r6T-hrX8" frameborder="0" allowfullscreen></iframe>
+        <br><br>
+<!-- Formulario -->
+<div class="form-container">
+    <h2 class="flotante">¡Regístrate Ahora!</h2>
+
+    <form id="formulario" onsubmit="enviarFormulario(event)">
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br>
+        <input type="text" id="whatsapp" name="whatsapp" placeholder="Tu WhatsApp" required><br>
+
+        <select id="interes" name="interes" required>
+            <option value="">Selecciona tu interés</option>
+            <option value="Negocios Digitales">Negocios Digitales</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Trading">Trading</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Hotelería y Turismo">Hotelería y Turismo</option>
+            <option value="Publicidad en Redes Sociales">Publicidad en Redes Sociales</option>
+        </select><br>
+
+        <select id="asistencia" name="asistencia" required>
+            <option value="">Selecciona tu modalidad de asistencia</option>
+            <option value="Presencial">Presencial</option>
+            <option value="Virtual">Virtual</option>
+        </select><br>
+
+        <!-- Nueva sección: Importancia de la educación -->
+        <label for="importancia">¿Qué tan importante es la educación para alcanzar tus metas?</label>
+        <select id="importancia" name="importancia" required>
+            <option value="1">1 - Poco importante</option>
+            <option value="2">2</option>
+            <option value="3">3 - Neutral</option>
+            <option value="4">4</option>
+            <option value="5">5 - Muy importante</option>
+        </select><br>
+
+        <!-- Nueva sección: Rango de inversión en educación -->
+        <label for="rango">Si pudieras invertir en educación, ¿qué rango se ajusta mejor a tu capacidad?</label>
+        <select id="rango" name="rango" required>
+            <option value="hasta 500,000">Hasta 500,000</option>
+            <option value="500,000 - 1,000,000">Entre 500,000 y 1 millón</option>
+            <option value="1,000,000 - 2,000,000">Entre 1 millón y 2 millones</option>
+            <option value="2,000,000 - 4,000,000">Entre 2 millones y 4 millones</option>
+            <option value="4,000,000 - 5,000,000">Entre 4 millones y 5 millones</option>
+            <option value="más de 5,000,000">Más de 5 millones (Ejemplo: hasta 12 millones)</option>
+        </select><br>
+
+        <button type="submit">Solicitar Invitación</button>
+    </form>
+</div>
+
+
+    
+<!-- Sección de derechos reservados y políticas -->
+<footer>
+    <p>© 2025 Todos los derechos reservados | <a href="politica.html">Política de Privacidad</a></p>
+</footer>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
