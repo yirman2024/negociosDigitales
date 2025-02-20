@@ -125,37 +125,35 @@ footer a:hover {
 
 
 /* Estilo para el anuncio en la cabecera */
-.anuncio-urgencia {
-    position: fixed; /* Fija el anuncio en la parte superior de la pantalla */
-    top: 0; /* Lo coloca en la parte superior */
-    left: 0; /* Lo alinea con el borde izquierdo */
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    background-color: #ff0000; /* Fondo rojo llamativo para captar la atención */
-    color: white; /* Texto en color blanco para contraste */
-    text-align: center; /* Centra el texto */
-    font-size: 22px; /* Tamaño del texto */
+/* Anuncio fijo en la parte superior de la página */
+.anuncio {
+    position: fixed; /* Fija el anuncio en la parte superior */
+    top: 0; /* Lo coloca en la parte superior de la pantalla */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    background-color: red; /* Fondo rojo llamativo */
+    color: yellow; /* Texto en color amarillo para mayor contraste */
+    padding: 10px; /* Espaciado interno para mejorar la visibilidad */
+    font-size: 20px; /* Tamaño del texto */
     font-weight: bold; /* Texto en negrita */
-    padding: 15px 0; /* Espaciado arriba y abajo para mejor visibilidad */
-    z-index: 9999; /* Asegura que el anuncio esté por encima de otros elementos */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Agrega sombra para resaltar el anuncio */
+    text-shadow: 2px 2px 5px black; /* Sombra para hacer el texto más legible */
+    overflow: hidden; /* Evita que el texto se desborde */
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+    z-index: 1000; /* Se asegura de que el anuncio esté por encima de otros elementos */
 }
 
-/* Efecto de deslizamiento solo para el texto */
-.anuncio-urgencia span {
-    display: inline-block; /* Permite animar el texto sin afectar el contenedor */
-    white-space: nowrap; /* Evita que el texto se corte y se mantenga en una línea */
-    animation: deslizar-urgencia 30s linear infinite; /* Aplica animación de deslizamiento */
+/* Estilo del contenido dentro del anuncio */
+.anuncio span {
+    display: inline-block; /* Permite la animación del texto */
+    position: relative; /* Permite ajustar su posición si es necesario */
+    animation: desplazamiento 30s linear infinite; /* Aplica la animación de desplazamiento */
 }
 
-/* Efecto de deslizamiento del texto de izquierda a derecha */
-@keyframes deslizar-urgencia {
-    0% {
-        transform: translateX(-100%); /* Inicia fuera de la pantalla, a la izquierda */
-    }
-    100% {
-        transform: translateX(100%); /* Se mueve completamente hacia la derecha */
-    }
+/* Animación de desplazamiento del texto */
+@keyframes desplazamiento {
+    from { transform: translateX(100%); } /* Comienza desde el lado derecho */
+    to { transform: translateX(-100%); } /* Se mueve hacia el lado izquierdo */
 }
+
 
 /* Estilo del texto con efecto 3D */
 .anuncio-urgencia span {
@@ -177,15 +175,14 @@ footer a:hover {
     }
 }
 
-/* Fondo de la página */
+/* Fondo de la página 
 body {
-    background: url('fondo.jpg') no-repeat center center fixed; /* Imagen de fondo centrada y fija */
-    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-    font-family: Arial, sans-serif; /* Fuente del texto */
-    color: white; /* Color del texto en la página */
-    margin: 0; /* Elimina márgenes predeterminados */
-    padding: 0; /* Elimina el relleno predeterminado */
-}
+    background: url('evento.jpg') no-repeat center center fixed; /* Imagen de fondo centrada y fija 
+    font-family: Arial, sans-serif; /* Fuente del texto 
+    color: white; /* Color del texto en la página 
+    margin: 0; /* Elimina márgenes predeterminados 
+    padding: 0; /* Elimina el relleno predeterminado 
+}*/
 
 /* Contenedores con fondo sólido y opacidad */
 .container, .form-container, #contador {
@@ -224,4 +221,3 @@ h1, h2 {
     font-size: 24px; /* Ajusta el tamaño del texto */
     font-weight: bold; /* Hace el texto más grueso */
 }
-
